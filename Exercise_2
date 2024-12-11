@@ -1,0 +1,18 @@
+# Asking for the temperature
+temp = int(input("Please type in the temperature: "))
+
+# If the temperature is below 0, print "It's freezing!"
+if(temp < 0) : 
+ print("It's freezing!")
+
+# If the temperature is below 10, print "It's cold!"
+if(temp < 10) :  
+ print("It's cold")
+
+# If the temperature is below 20, print "It's cool!"
+if(temp < 20):
+ print("It's cool!")
+
+# Ending with "Stay safe!"
+print("Stay safe!")
+

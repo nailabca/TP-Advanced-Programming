@@ -1,0 +1,14 @@
+# Asking for the 1st person's age
+age_p1 = int(input("Please type in the age of the first person: "))
+
+# Asking for the 2nd person's age
+age_p2 = int(input("Please type in the age of the second person: "))
+
+# Comparing ages and printing the older or both if the same ages
+if age_p1 > age_p2 :
+ print("The older age is: " + str(age_p1))
+elif age_p1 < age_p2 : 
+ print("The older age is: " + str(age_p2))
+else : 
+ print("Both people are the same age! ")
+

@@ -1,0 +1,12 @@
+# Asking for a number
+num = int(input("Number: "))
+
+# Divisible by 3? by 5? both?
+if num % 3 ==0 and num % 5 == 0 :
+ print("FizzBuzz")
+
+if num % 3 == 0 and not num % 5 == 0 : 
+ print("Fizz")
+
+elif num % 5 == 0 and not num % 3 ==0 :
+ print("Buzz")

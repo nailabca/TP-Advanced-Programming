@@ -1,0 +1,21 @@
+# Creating a list to save city names and their populations
+cities = []
+
+# The user enters city names until he enters "stop"
+while 1 == 1 :
+    city = input("Enter the name of a city or 'stop' to stop: ")
+    if city == "stop" : 
+      break
+    else: 
+      # len for the length of the city name
+      population = len(city) * 1000000
+      # append to save the city and its population in the list cities
+      cities.append((city,population))
+
+# Sorting of the cities in a descending order
+cities.sort( key = lambda x: x[1], reverse=True)
+
+# Displaying the descendingly sorted cities and their populations
+for city, population in cities:
+ print(f'The city "{city}" has {len(city)} letters, so its population is {population:,}.')
+

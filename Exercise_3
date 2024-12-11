@@ -1,0 +1,25 @@
+# Asking for the total amount of a purchase
+total_ammount = int(input("Total amount: "))
+
+# Asking for the number of items
+num_items = int(input("Number of items: "))
+
+# Asking for the day of the week
+day = input("Day of the week: ")
+
+# Calculating the discount 
+if day in ["Saturday", "Sunday"] : 
+  dis = 0.2
+elif day in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]:
+  dis = 0.1
+else:
+  print("The day you inserted is wrong")
+
+if (num_items > 5):
+  dis = dis + 0.05
+
+# Calculating the price with the disccount
+price_dis = total_ammount * (1 - dis)
+
+# Displaying the final price
+print("Total price after discount: " + str(price_dis))

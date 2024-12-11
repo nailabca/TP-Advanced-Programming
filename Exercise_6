@@ -1,0 +1,13 @@
+# Asking for the price 
+price = float(input("Please type in a price: "))
+if price <= 0:
+  print("The price must be positive.")
+  exit
+
+# Separating dinars from centimes
+dinars = int(price)
+centimes = int(( price - dinars ) *100)
+
+# Displaying 
+print("Dinars: " + str(dinars) )
+print("Centimes: " + str(centimes))

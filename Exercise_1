@@ -1,0 +1,14 @@
+# Asking for the name of the user
+name_user = input("Please enter your name: ")
+
+# Checking if the user name is vip
+if (name_user == "VIP") : 
+    print("Enjoy the show for free!")
+else : 
+    # Number of tickets
+    num_ticket = int(input("How many tickets would you like to buy? "))
+    print("The total cost is " + str(num_ticket*15.50))
+    print("Enjoy your tickets!")
+
+
+

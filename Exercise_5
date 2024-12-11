@@ -1,0 +1,21 @@
+# In this exercise I didn't really understand the purpose of comparing seconds to 
+# obtain the fastest runner so I compared times as they are
+
+
+# Asking for runners infos (name and time in seconds)
+print ("Runner 1: ")
+name_r1 = input("Name: ")
+time_r1 = float(input("Time (in seconds): "))
+
+print ("Runner 2: ")
+name_r2 = input("Name: ")
+time_r2 = float(input("Time (in seconds): "))
+
+# Comparing times and displaying the fastest
+if time_r1 > time_r2 :
+ print("The faster runner is "+ name_r1)
+elif time_r2 > time_r1 :
+  print("The faster runner is "+ name_r2)
+else: 
+  print(name_r1 + " and " + name_r2 + " have the same time")
+

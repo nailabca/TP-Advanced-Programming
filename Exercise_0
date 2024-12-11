@@ -1,0 +1,14 @@
+# Asking the user how many people need a ride
+num_people_total = int(input("How many people need a ride ? "))
+
+# Asking the user how many people can fit in one taxi
+num_people_per_ride = int(input("How many people fit in one taxi? "))
+
+# Calculating how many full taxis are they
+num_taxi_remplis = num_people_total // num_people_per_ride
+
+# Checking if an extra one is needed
+extra_taxi = 1 if num_people_total % num_people_per_ride != 0 else 0
+
+# The result is the sum
+print("Number of taxis needed: " + str(num_taxi_remplis + extra_taxi) )

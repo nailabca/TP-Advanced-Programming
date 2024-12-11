@@ -1,0 +1,16 @@
+# Asking for a word 
+word = input("Enter a word :")
+
+# Setting the boolean is_palindrome to true
+is_palindrome = True
+
+# Is the word a palindrome ?
+for i in range(len(word)//2):
+ if word[i] != word[-(i+1)] : # ps here : using negative indexing to access the caracters from the end 
+   is_palindrome = False
+   break
+ 
+if is_palindrome:
+ print("Yes, it's a palindrome.")
+else:
+ print("No, it's not a palindrome.")
