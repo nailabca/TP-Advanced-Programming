@@ -10,4 +10,4 @@ centimes = int(( price - dinars ) *100)
 
 # Displaying 
 print("Dinars: " + str(dinars) )
-print("Centimes: " + str(centimes))
+print("Centimes: " + str(centimes)) 

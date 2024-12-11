@@ -6,7 +6,7 @@ is_palindrome = True
 
 # Is the word a palindrome ?
 for i in range(len(word)//2):
- if word[i] != word[-(i+1)] : # ps here : using negative indexing to access the caracters from the end 
+ if word[i] != word[-(i+1)] : # ps here : using negative indexing to access the caracters from the end  
    is_palindrome = False
    break
  

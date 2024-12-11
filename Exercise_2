@@ -1,4 +1,4 @@
-# Asking for the temperature
+# Asking for the temperature 
 temp = int(input("Please type in the temperature: "))
 
 # If the temperature is below 0, print "It's freezing!"

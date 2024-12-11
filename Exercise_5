@@ -2,7 +2,7 @@
 # obtain the fastest runner so I compared times as they are
 
 
-# Asking for runners infos (name and time in seconds)
+# Asking for runners infos (name and time in seconds) 
 print ("Runner 1: ")
 name_r1 = input("Name: ")
 time_r1 = float(input("Time (in seconds): "))

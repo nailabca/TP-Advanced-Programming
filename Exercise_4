@@ -1,4 +1,4 @@
-# Asking for the 1st person's age
+# Asking for the 1st person's age 
 age_p1 = int(input("Please type in the age of the first person: "))
 
 # Asking for the 2nd person's age

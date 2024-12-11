@@ -10,3 +10,4 @@ if num % 3 == 0 and not num % 5 == 0 :
 
 elif num % 5 == 0 and not num % 3 ==0 :
  print("Buzz")
+ 

@@ -1,4 +1,4 @@
-# Asking for the name of the user
+# Asking for the name of the user 
 name_user = input("Please enter your name: ")
 
 # Checking if the user name is vip

@@ -1,4 +1,4 @@
-# Asking for the total amount of a purchase
+# Asking for the total amount of a purchase 
 total_ammount = int(input("Total amount: "))
 
 # Asking for the number of items

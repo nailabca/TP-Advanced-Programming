@@ -9,7 +9,7 @@ while 1 == 1 :
     else: 
       # len for the length of the city name
       population = len(city) * 1000000
-      # append to save the city and its population in the list cities
+      # append to save the city and its population in the list cities 
       cities.append((city,population))
 
 # Sorting of the cities in a descending order

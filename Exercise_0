@@ -1,4 +1,4 @@
-# Asking the user how many people need a ride
+# Asking the user how many people need a ride 
 num_people_total = int(input("How many people need a ride ? "))
 
 # Asking the user how many people can fit in one taxi
