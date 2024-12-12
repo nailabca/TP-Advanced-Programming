@@ -1,0 +1,28 @@
+# Asking the user for a string in lowercase
+string = input("Please type in a string: ")
+
+countA = countE = countO = 0
+
+for i in range(len(string)):
+    if string[i] == "a":
+        countA = countA + 1
+    elif string[i] == "e":
+        countE = countE + 1
+    elif string[i] == "o":
+        countO = countO + 1
+
+
+if countA > 0 :
+    print("a found")
+else: 
+    print("a not found")
+
+if countE > 0 :
+    print("e found")
+else: 
+    print("e not found")
+
+if countO > 0 :
+    print("o found")
+else: 
+    print("o not found")

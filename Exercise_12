@@ -1,0 +1,10 @@
+# Asking the user for the width 
+width = int(input("Width: "))
+
+# Asking the user for the height
+height = int(input("Height: "))
+
+# Displaying '#' according to the entered width and height
+for i in range(height):
+    print("#" * width)
+

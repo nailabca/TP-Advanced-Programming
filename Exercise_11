@@ -1,0 +1,5 @@
+# Asking the user for the width 
+width = int(input("Width: "))
+
+# Displaying '#' according to the entered width
+print("#" * width)

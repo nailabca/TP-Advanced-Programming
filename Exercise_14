@@ -1,0 +1,16 @@
+# Asking the user for a string 
+word = input("Word: ")
+
+width = 30
+
+# Calculating the spaces on each side 
+  # Subtract 2 for '*' borders 
+total_space = width - len(word) - 2 
+left_space = total_space // 2
+right_space = total_space - left_space
+
+# Displaying the frame
+print("*" * width)
+print("*" + " " * left_space + word + " " * right_space + "*")
+print("*" * width)
+

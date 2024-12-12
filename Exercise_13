@@ -1,0 +1,15 @@
+# Asking the user for a string
+string = input("Please type in a string: ")
+
+# Underlining the string while it's not empty
+while string != "": 
+    
+    underline = ""
+    print(string)
+    for i in range(len(string)):
+        underline = underline + "-"
+
+    print(underline)
+    string = input("Please type in a string: ")
+
+
