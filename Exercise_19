@@ -1,0 +1,32 @@
+# initializing an empty set for unique words
+unique_words = set()
+total_words = 0  # for the total number of words entered
+
+while True:
+    # input user for a word
+    word = input("Enter a word: ").strip().lower()  
+
+    # Removing leading/trailing spaces
+    # i thought it would work like this but it didn't so 
+    # i used it on the input directly
+    # word.strip()
+    # word.lower()
+
+    total_words+=1
+
+    # checking if the word is already in the set
+    if word in unique_words:
+        print(f"You typed in {len(unique_words)} unique words.")
+        print("Total words entered: " + str(total_words))
+        print("Unique words (alphabetically):", sorted(unique_words))
+        answer = input("Voulez vous sauvegarder la set dans un fichier ? o pour oui et n pour non : ")  
+        if answer== 'o':
+            file_name = "unique_words.txt"
+            with open(file_name, "w") as file:
+                file.write("\n".join(sorted(unique_words)))
+            print(f"Unique words saved to {file_name}")
+            break  # exit the program on duplicate input  
+    
+    # add the word to the set if not duplicated
+    unique_words.add(word)
+

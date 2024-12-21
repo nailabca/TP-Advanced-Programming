@@ -1,0 +1,15 @@
+while True:
+    try:
+        # user input positive integer
+        n = int(input("Enter a positive integer: "))
+        if n <= 0:
+            print("The number must be positive please try again.")
+            continue
+        break  # exits the loop if valid input is given
+    except ValueError:
+        print("Invalid input. Please enter a positive integer.")
+
+# diplaying |[-N , N]|-{0}
+for i in range(-n, n + 1):
+    if i != 0:
+        print(i)

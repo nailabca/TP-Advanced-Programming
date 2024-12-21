@@ -1,0 +1,63 @@
+# for the number of elements in the list
+def length(list):
+    return len(list)
+
+# to calculate the arithmetic mean of the list
+def mean(list):
+    if not list:
+        return None
+    return sum(list) / len(list)
+
+# to calculate the range of the list max - min
+def range_of_list(list):
+    if not list:
+        return None
+    return max(list) - min(list)
+
+# to calculate the median of the list
+def median(list):
+    if not list:
+        return None
+    sorted_list = sorted(list)
+    n = len(sorted_list)
+    mid = n // 2
+    if n % 2 == 0:
+        return (sorted_list[mid - 1] + sorted_list[mid]) / 2
+    else:
+        return sorted_list[mid]
+
+# to calculate the standard deviation of the list
+def standard_deviation(list):
+    if not list:
+        return None
+    avg = mean(list)
+    variance = sum((x - avg) ** 2 for x in list) / len(list)
+    return variance ** 0.5 # or import math and use sqrt()
+
+# to create a dictionary with list stats
+def statistics(list):
+    return {
+        "Length": length(list),
+        "Mean": f"{mean(list):.2f}" if list else None,
+        "Range": f"{range_of_list(list):.2f}" if list else None,
+        "Median": f"{median(list):.2f}" if list else None,
+        "Standard Deviation": f"{standard_deviation(list):.2f}" if list else None,
+    }
+
+
+# testing the functions
+test_cases = [
+    # empty list
+    [],  
+    # single element
+    [2],  
+    # list with negative numbers
+    [-5, -7, 4, -6, 47],  
+    # list with floating-point numbers
+    [2.2, 3.7, 4.6, 7.6],  
+]
+
+for i, case in enumerate(test_cases, start=1):
+    print(f"Test Case {i}: {case}")
+    print("Statistics:", statistics(case))
+    print("\n"*1)

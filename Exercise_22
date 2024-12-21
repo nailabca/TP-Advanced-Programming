@@ -1,0 +1,15 @@
+# user input
+word = input("Please type in a string: ")
+
+# for each character in the word
+for char in word:
+    print(char)  # prints the character
+    print("*")   # prints * a new line
+
+print("\n")
+
+# or a for range
+for i in range(len(word)):
+    print(word[i]) # prints the character
+    print("*")     # prints * a new line
+

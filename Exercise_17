@@ -1,0 +1,44 @@
+# Initializing lists
+numbers= []
+shoe_sizes = []
+
+# append items to the lists 
+numbers.append(1)
+numbers.append(2)
+numbers.append(3)
+numbers.append(4)
+numbers.append(5)
+
+shoe_sizes.append(8)
+shoe_sizes.append(9)
+shoe_sizes.append(10)
+shoe_sizes.append(11)
+shoe_sizes.append(12)
+
+
+# Display of the lists
+print("Numbers List: " , numbers)
+print("Shoe Sizes List: " , shoe_sizes)
+
+
+# adding duplicate
+numbers.append(3)
+
+# handle duplicate
+# with
+print("With duplicate: " ,numbers)
+
+numbers = list(set(numbers))
+
+# without
+print("Without duplicate: " ,numbers)
+
+# or in a for loop same thing
+'''
+for shoe_size in [8,9,10,11,12] :
+    shoe_sizes.append(shoe_size)
+'''
+
+# combining both lists
+numbers_and_shoe_sizes = numbers + shoe_sizes
+print("Combined list of numbers and shoe sizes: " , numbers_and_shoe_sizes)

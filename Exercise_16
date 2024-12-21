@@ -1,0 +1,32 @@
+# Initializing a list of numbers 
+list_num =[1,2,3,4,5]
+print(list_num)
+
+while True :
+    # User input for index and value
+    index = int(input("Enter index (-1 to quit) : "))
+
+    # case index = -1 to quit
+    if index == -1 :
+        break
+
+    
+    if index >= 0 and index < len(list_num):
+        
+        # exception for a non integer value
+        try:
+            # User input for new value
+            value = int(input("Enter new value: "))
+    
+            # changing the value at the index 
+            list_num[index]=value
+
+            # dispalying the new list
+            print(list_num)
+
+        except ValueError :
+            print("The value must be an integer.")
+        
+    else :
+        # case out of bounds
+        print("Index out of bounds.")

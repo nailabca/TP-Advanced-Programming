@@ -1,0 +1,79 @@
+import statistics
+import os
+
+# function to load numbers from a file
+def load_file(file_name):
+    if not os.path.isfile(file_name):
+        print(f"The file '{file_name}' does not exist.")
+        return []
+    try:
+        with open(file_name, "r") as file:
+            content = file.read().strip()
+            if not content:
+                print(f"The file '{file_name}' is empty.")
+                return []
+            loaded_numbers = list(map(int, content.split(",")))
+            print(f"The loaded numbers from '{file_name}': {loaded_numbers}")
+            return loaded_numbers
+    except ValueError:
+        print(f"The file '{file_name}' contains non-integer values.")
+        return []
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return []
+    
+# empty list to store user inputs
+user_list = []
+
+
+while True:
+    load_choice = input("Do you want to load numbers from a file? (type 'y' for yes or 'n' for no): ").strip().lower()
+    if load_choice == "y":
+        file_load = input("Enter the file name to load from (ex: user_list.txt): ").strip()
+        loaded_numbers = load_file(file_load)
+        user_list.extend(loaded_numbers)
+        break
+    elif load_choice == "n":
+        print("Starting with an empty list.")
+        break
+    else:
+        print("Invalid input. Please type 'y' or 'n'.")
+
+# main loop
+while True:
+    try:
+        # input from the user for a number
+        number = int(input("Enter a number (0 to stop): "))
+
+        # stops if the user enters 0
+        if number == 0:
+            print("You exited the program.")
+            break
+        else:
+            # add the number to the list
+            user_list.append(number)
+
+        # display final stats
+        print(f"Final List: {user_list}")
+        print(f"Sorted List (Ascending): {sorted(user_list)}")
+        print(f"Sorted List (Descending): {sorted(user_list, reverse=True)}")
+
+        # here for the mean and median we use the fonctions imported from statistics library
+        if user_list:
+            print(f"Mean: {statistics.mean(user_list):.2f}")
+            print(f"Median: {statistics.median(user_list):.2f}")
+
+        # choice to save the list
+        choice = input("Do you want to save the list to a file? (y for yes, n for no): ").strip().lower()
+        if choice == 'o':
+            # save the list to a file
+            file_name = "user_list.txt"
+            with open(file_name, "w") as file:
+                file.write(",".join(map(str, user_list)))
+            print(f"List saved to {file_name}.")
+            break
+
+
+    except ValueError:
+        # Handle non-integer inputs
+        print("Invalid input. Please enter an integer.")
